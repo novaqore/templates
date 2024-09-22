@@ -6,7 +6,8 @@ Welcome to the NovaQore Templates repository. This collection of templates is de
 
 1. [AppContext Template](#appcontext-template)
 2. [NotificationContext Template](#notificationcontext-template)
-3. [Future Template](#future-template)
+3. [Firebase Security Rules](#firebase-security-rules)
+4. [Future Template](#future-template)
 
 ## AppContext Template
 
@@ -140,9 +141,24 @@ function MyComponent() {
 }
 ```
 
+## Firebase Security Rules
+
+To ensure proper security in your Firebase project, you should set up appropriate security rules. Here's a basic set of rules that allows only authenticated users to read and write data:
+
+```json
+{
+  "rules": {
+    ".read": "auth != null",  // Only authenticated users can read
+    ".write": "auth != null"  // Only authenticated users can write
+  }
+}
+```
+
+These rules should be placed in your Firebase project's security rules section. They ensure that all read and write operations require authentication, providing a basic level of security for your application.
+
 ## Future Template
 
-[Placeholder for future template documentation]
+This section is reserved for future templates that will be added to the NovaQore collection. Each new template will include basic implementation details and usage examples to help developers quickly understand and integrate these components into their projects.
 
 ---
 
